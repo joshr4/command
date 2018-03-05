@@ -41,10 +41,10 @@ module.exports = {
                         throw err;
                     }
                     process.stdout.write(data)
+                    process.stdout.write('\nprompt > ')
                 })
             }
         )  
-        setTimeout( () => {process.stdout.write('\nprompt > ')},500); //only works if forEach takes less than 500ms!
     },
 
     head: function(args){
@@ -57,10 +57,10 @@ module.exports = {
                         throw err;
                     }
                     process.stdout.write(data.split('\n').slice(0,numlines).join('\n'));
+                    process.stdout.write('\nprompt > ')
                 })
             }
         )
-        setTimeout( () => {process.stdout.write('\nprompt > ')},500); //only works if forEach takes less than 500ms!
     },
 
     default: function(args){
