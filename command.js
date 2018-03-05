@@ -9,8 +9,7 @@ module.exports = {
     },
 
     date: function(){
-        var date = new Date();
-        process.stdout.write(date.toString());
+        process.stdout.write(Date());
         process.stdout.write('\ndateprompt > ');//print date
     },
 
@@ -57,10 +56,7 @@ module.exports = {
                     if(err) {
                         throw err;
                     }
-                    //console.log(data.split('\n'))
-                    lineArr.push(data.toString().split('\n'));
-                    lineArr = lineArr.slice(0,numlines)
-                    process.stdout.write(lineArr.join('\n'))
+                    process.stdout.write(data.split('\n').slice(0,numlines).join('\n'));
                 })
             }
         )
