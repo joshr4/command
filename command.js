@@ -59,7 +59,8 @@ module.exports = {
                     }
                     //console.log(data.split('\n'))
                     lineArr.push(data.toString().split('\n'));
-                    process.stdout.write(lineArr.slice(0,numlines).join(' \n'))
+                    lineArr = lineArr.slice(0,numlines)
+                    process.stdout.write(lineArr.join('\n'))
                 })
             }
         )
